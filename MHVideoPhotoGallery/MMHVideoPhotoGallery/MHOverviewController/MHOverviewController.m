@@ -232,6 +232,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.navigationController.delegate = self;
+    self.navigationController.navigationBar.barTintColor = UIColor.blackColor;
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
