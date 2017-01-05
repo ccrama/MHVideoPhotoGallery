@@ -64,7 +64,7 @@
     [self setNeedsStatusBarAppearanceUpdate];
     
     
-    [UIApplication.sharedApplication setStatusBarStyle:self.galleryViewController.preferredStatusBarStyleMH
+    [UIApplication.sharedApplication setStatusBarStyle:UIStatusBarStyleLightContent
                                               animated:YES];
     
     [self.pageViewController.view.subviews.firstObject setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -147,7 +147,8 @@
                                                                                   action:@selector(donePressed)];
     
     self.navigationItem.rightBarButtonItem = doneBarButton;
-    self.navigationController.navigationBar.tintColor = UIColor.blackColor;
+    self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
+    self.navigationController.navigationBar.backgroundColor = UIColor.blackColor;
 
     self.view.backgroundColor = [self.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
     
@@ -311,7 +312,7 @@
 -(void)configureTextView:(UITextView*)textView {
     textView.backgroundColor = [UIColor clearColor];
     textView.font = [UIFont systemFontOfSize:15];
-    textView.textColor = [UIColor blackColor];
+    textView.textColor = [UIColor whiteColor];
     textView.scrollEnabled = NO;
     textView.editable = NO;
     textView.delegate = self;
