@@ -494,7 +494,7 @@
 -(void)updateTitleForIndex:(NSInteger)pageIndex{
     NSString *localizedString  = MHGalleryLocalizedString(@"imagedetail.title.current");
     self.navigationItem.title = [NSString stringWithFormat:localizedString,@(pageIndex+1),@(self.numberOfGalleryItems)];
-    self.navigationItem.title.textColor = UIColor.whiteColor;
+    self.navigationItem.titleView.tintColor = UIColor.whiteColor;
 }
 
 
