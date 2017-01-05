@@ -70,10 +70,6 @@
     [self.pageViewController.view.subviews.firstObject setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return  self.galleryViewController.preferredStatusBarStyleMH;
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     if (self.navigationController.delegate == self) {
