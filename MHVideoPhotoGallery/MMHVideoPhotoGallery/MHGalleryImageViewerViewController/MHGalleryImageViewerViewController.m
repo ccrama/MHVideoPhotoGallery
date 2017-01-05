@@ -122,6 +122,10 @@
     }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{ 
+    return UIStatusBarStyleLightContent; 
+}
+
 -(void)viewDidLoad{
     [super viewDidLoad];
     
@@ -147,12 +151,11 @@
                                                                                   action:@selector(donePressed)];
     
     self.navigationItem.rightBarButtonItem = doneBarButton;
-    self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
-    self.navigationController.navigationBar.backgroundColor = UIColor.blackColor;
+    self.navigationController.navigationBar.tintColor = UIColor.blackColor;
 
     self.view.backgroundColor = [self.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
     
-    
+    [self setNeedsStatusBarAppearanceUpdate];
     self.pageViewController = [UIPageViewController.alloc initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                             navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                                                           options:@{ UIPageViewControllerOptionInterPageSpacingKey : @30.f }];
