@@ -1389,6 +1389,7 @@
     
     self.moviePlayer.shouldAutoplay = NO;
     self.moviePlayer.repeatMode = MPMovieRepeatModeOne;
+    self.moviePlayer.useApplicationAudioSession = NO;
     self.moviePlayer.view.frame = self.view.bounds;
     self.moviePlayer.view.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     self.moviePlayer.view.hidden = YES;
