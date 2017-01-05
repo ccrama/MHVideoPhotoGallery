@@ -56,7 +56,7 @@
     [super viewDidAppear:animated];
     
     self.navigationController.delegate = self;
-    self.navigationController.navigationBar.barTintColor = UIColor.black
+    self.navigationController.navigationBar.barTintColor = UIColor.blackColor
 }
 
 -(void)viewWillAppear:(BOOL)animated{
