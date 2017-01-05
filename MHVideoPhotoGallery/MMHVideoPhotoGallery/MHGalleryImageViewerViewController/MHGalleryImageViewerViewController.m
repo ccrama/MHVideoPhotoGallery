@@ -147,7 +147,9 @@
                                                                                   action:@selector(donePressed)];
     
     self.navigationItem.rightBarButtonItem = doneBarButton;
-    
+    self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
+    self.navigationController.navigationBar.backgroundColor = UIColor.blackColor;
+
     self.view.backgroundColor = [self.UICustomization MHGalleryBackgroundColorForViewMode:MHGalleryViewModeImageViewerNavigationBarShown];
     
     
