@@ -38,7 +38,7 @@
         self.descriptionTruncationString = [self truncationString];
         self.barButtonsTintColor = nil;
         self.barStyle = UIBarStyleBlack;
-        self.barTintColor = nil;
+        self.barTintColor = UIColor.whiteColor;
 		self.showMHShareViewInsteadOfActivityViewController = YES;
         self.useCustomBackButtonImageOnImageViewer = YES;
         self.showOverView = YES;
