@@ -101,6 +101,11 @@
     return MHGalleryViewModeImageViewerNavigationBarShown;
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.moviePlayer stop];
+}
+
 -(void)reloadData {
     if ([self numberOfGalleryItems] > self.pageIndex) {
         MHGalleryItem *item = [self itemForIndex:self.pageIndex];
@@ -986,14 +991,14 @@
             self.slider.autoresizingMask =UIViewAutoresizingFlexibleWidth;
             [self.moviePlayerToolBarTop addSubview:self.slider];
             
-            self.leftSliderLabel = [UILabel.alloc initWithFrame:CGRectMake(8, 0, 40, 43)];
+            self.leftSliderLabel = [UILabel.alloc initWithFrame:CGRectMake(8, 0, 60, 43)];
             self.leftSliderLabel.font =[UIFont systemFontOfSize:14];
             self.leftSliderLabel.text = @"00:00";
             self.leftSliderLabel.textColor = self.viewController.UICustomization.videoProgressTintColor;
             [self.moviePlayerToolBarTop addSubview:self.leftSliderLabel];
             
             self.rightSliderLabel = [UILabel.alloc initWithFrame:CGRectZero];
-            self.rightSliderLabel.frame = CGRectMake(self.viewController.view.frame.size.width-50, 0, 50, 43);
+            self.rightSliderLabel.frame = CGRectMake(self.viewController.view.frame.size.width-70, 0, 70, 43);
             self.rightSliderLabel.font = [UIFont systemFontOfSize:14];
             self.rightSliderLabel.text = @"-00:00";
             self.rightSliderLabel.textColor = self.viewController.UICustomization.videoProgressTintColor;
