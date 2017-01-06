@@ -101,11 +101,6 @@
     return MHGalleryViewModeImageViewerNavigationBarShown;
 }
 
--(void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [self.moviePlayer stop];
-}
-
 -(void)reloadData {
     if ([self numberOfGalleryItems] > self.pageIndex) {
         MHGalleryItem *item = [self itemForIndex:self.pageIndex];
@@ -1462,6 +1457,13 @@
         return MHGalleryViewModeImageViewerNavigationBarHidden;
     }
     return MHGalleryViewModeImageViewerNavigationBarShown;
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    if (self.playingVideo) {
+        [self.moviePlayer stop];
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated{
