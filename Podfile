@@ -5,5 +5,4 @@ platform :ios, "9.0"
 inhibit_all_warnings!
 
 pod 'SDWebImage'
-pod 'TTTAttributedLabel'
 pod 'Masonry'
