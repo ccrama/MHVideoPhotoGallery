@@ -3,12 +3,10 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
-  - TTTAttributedLabel
 
 DEPENDENCIES:
   - Masonry
   - SDWebImage
-  - TTTAttributedLabel
   
 SPEC CHECKSUMS:
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
