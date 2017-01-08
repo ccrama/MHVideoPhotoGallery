@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   }
 
   s.dependency 'SDWebImage'
-  s.dependency 'TTTAttributedLabel', '1.13.3'
+  s.dependency 'TTTAttributedLabel', '2.0.0'
   s.dependency 'Masonry'
 
   s.frameworks = 'MessageUI','Social', 'ImageIO', 'QuartzCore', 'Accelerate','CoreMedia', 'AVFoundation','MediaPlayer'
